@@ -22,7 +22,7 @@ class GenerateCSRTest extends \PHPUnit\Framework\TestCase
             $csr_request = GenerateCSR::fromRequest(
                 CSRRequest::make()
                     ->setUID('311111111101113')
-                    ->setSerialNumber('200000', 'Salla Store', 'Merchant Name')
+                    ->setSerialNumber('200000', 'Picker Store', 'Merchant Name')
                     ->setCommonName($CN)
                     ->setCountryName($country)
                     ->setOrganizationName($organizationName)

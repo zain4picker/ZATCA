@@ -52,7 +52,7 @@
                 </cac:TaxScheme>
             </cac:PartyTaxScheme>
             <cac:PartyLegalEntity>
-                <cbc:RegistrationName>Salman Bitt - Salla</cbc:RegistrationName>
+                <cbc:RegistrationName>Salman Bitt - Picker</cbc:RegistrationName>
             </cac:PartyLegalEntity>
         </cac:Party>
     </cac:AccountingSupplierParty>

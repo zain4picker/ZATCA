@@ -1,5 +1,5 @@
 name: 💡 Feature Request
-description: Suggest an idea for Salla CLI
+description: Suggest an idea for Picker CLI
 title: "feat: "
 body:
   - type: checkboxes
@@ -7,7 +7,7 @@ body:
       label: Prerequisites
       description: Please ensure you have completed all of the following.
       options:
-        - label: I have searched for [existing issues](https://github.com/SallaApp/Salla-CLI/issues) that already include this feature request, without success.
+        - label: I have searched for [existing issues](https://github.com/PickerApp/Picker-CLI/issues) that already include this feature request, without success.
           required: true
   - type: textarea
     attributes:
@@ -24,7 +24,7 @@ body:
   - type: textarea
     attributes:
       label: Describe Preferred Solution
-      description: A clear and concise description of what you how you want this feature to be added to Salla CLI.
+      description: A clear and concise description of what you how you want this feature to be added to Picker CLI.
   - type: textarea
     attributes:
       label: Describe Alternatives
@@ -32,7 +32,7 @@ body:
   - type: textarea
     attributes:
       label: Related Code
-      description: If you are able to illustrate the feature request with an example, please provide a sample Salla CLI application. Try out our [Getting Started Wizard](https://salla.dev/blog/meet-salla-cli/) to quickly spin up an Salla CLI starter app.
+      description: If you are able to illustrate the feature request with an example, please provide a sample Picker CLI application. Try out our [Getting Started Wizard](https://salla.dev/blog/meet-salla-cli/) to quickly spin up an Picker CLI starter app.
   - type: textarea
     attributes:
       label: Additional Information

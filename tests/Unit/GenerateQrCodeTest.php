@@ -17,7 +17,7 @@ class GenerateQrCodeTest extends \PHPUnit\Framework\TestCase
     public function shouldGenerateAQrCode()
     {
         $generatedString = GenerateQrCode::fromArray([
-            new Tag(1, 'Salla'),
+            new Tag(1, 'Picker'),
             new Tag(2, '1234567891'),
             new Tag(3, '2021-07-12T14:25:09Z'),
             new Tag(4, '100.00'),
@@ -47,7 +47,7 @@ class GenerateQrCodeTest extends \PHPUnit\Framework\TestCase
     public function shouldGenerateAQrCodeFromTagsClasses()
     {
         $generatedString = GenerateQrCode::fromArray([
-            new Seller('Salla'),
+            new Seller('Picker'),
             new TaxNumber('1234567891'),
             new InvoiceDate('2021-07-12T14:25:09Z'),
             new InvoiceTotalAmount('100.00'),
@@ -62,7 +62,7 @@ class GenerateQrCodeTest extends \PHPUnit\Framework\TestCase
     public function shouldGenerateAQrCodeDisplayAsImageData()
     {
         $generatedString = GenerateQrCode::fromArray([
-            new Seller('Salla'),
+            new Seller('Picker'),
             new TaxNumber('1234567891'),
             new InvoiceDate('2021-07-12T14:25:09Z'),
             new InvoiceTotalAmount('100.00'),
