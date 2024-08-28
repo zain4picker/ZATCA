@@ -1,0 +1,50 @@
+{
+    "name": "zain4picker/zatca",
+    "description": "A helper to generate the QR code and signed it for ZATCA e-invoicing",
+    "type": "library",
+    "keywords": [
+        "ZATCA",
+        "e-invocing",
+        "zain4picker",
+        "qr-code"
+    ],
+    "homepage": "https://github.com/zain4picker/zatca",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Picker Team",
+            "email": "contact@picker.sd",
+            "homepage": "https://picker.sd"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/zain4picker/zatca/issues",
+        "source": "https://github.com/zain4picker/zatca"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.0",
+        "ext-mbstring": "*",
+        "ext-dom": "*",
+        "robrichards/xmlseclibs": "^3.1",
+        "josemmo/uxml": "^0.1.4",
+        "chillerlan/php-qrcode": "^4.3",
+        "phpseclib/phpseclib": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Picker\\ZATCA\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Picker\\ZATCA\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
