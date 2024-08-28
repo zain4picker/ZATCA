@@ -128,13 +128,13 @@ use Picker\ZATCA\Tags\InvoiceTotalAmount;
 use Picker\ZATCA\Tags\Seller;
 use Picker\ZATCA\Tags\TaxNumber;
 
-$generatedString = GenerateQrCode::fromArray([
-    new Seller('Picker'), // seller name        
-    new TaxNumber('1234567891'), // seller tax number
-    new InvoiceDate('2021-07-12T14:25:09Z'), // invoice date as Zulu ISO8601 @see https://en.wikipedia.org/wiki/ISO_8601
-    new InvoiceTotalAmount('100.00'), // invoice total amount
-    new InvoiceTaxAmount('15.00') // invoice tax amount
-])->toBase64();
+$generatedString = GenerateQrCode::fromData(
+    'Picker', // seller name        
+    '1234567891'), // seller tax number
+    '2021-07-12T14:25:09Z', // invoice date as Zulu ISO8601 @see https://en.wikipedia.org/wiki/ISO_8601
+    '115.00', // invoice total amount
+    '15.00' // invoice tax amount
+)->toBase64();
 
 // > Output
 // AQVTYWxsYQIKMTIzNDU2Nzg5MQMUMjAyMS0wNy0xMlQxNDoyNTowOVoEBjEwMC4wMAUFMTUuMDA=
@@ -150,25 +150,25 @@ use Picker\ZATCA\Tags\InvoiceTotalAmount;
 use Picker\ZATCA\Tags\Seller;
 use Picker\ZATCA\Tags\TaxNumber;
 
-$generatedString = GenerateQrCode::fromArray([
-    new Seller('Picker'), // seller name        
-    new TaxNumber('1234567891'), // seller tax number
-    new InvoiceDate('2021-07-12T14:25:09Z'), // invoice date as Zulu ISO8601 @see https://en.wikipedia.org/wiki/ISO_8601
-    new InvoiceTotalAmount('100.00'), // invoice total amount
-    new InvoiceTaxAmount('15.00') // invoice tax amount
+$generatedString = GenerateQrCode::fromData(
+    'Picker', // seller name        
+    '1234567891'), // seller tax number
+    '2021-07-12T14:25:09Z', // invoice date as Zulu ISO8601 @see https://en.wikipedia.org/wiki/ISO_8601
+    '115.00', // invoice total amount
+    '15.00' // invoice tax amount
     // .....
-])->toTLV();
+)->toTLV();
 
 // Render A QR Code Image
 // data:image/png;base64, .........
-$displayQRCodeAsBase64 = GenerateQrCode::fromArray([
-    new Seller('Picker'), // seller name        
-    new TaxNumber('1234567891'), // seller tax number
-    new InvoiceDate('2021-07-12T14:25:09Z'), // invoice date as Zulu ISO8601 @see https://en.wikipedia.org/wiki/ISO_8601
-    new InvoiceTotalAmount('100.00'), // invoice total amount
-    new InvoiceTaxAmount('15.00') // invoice tax amount
+$displayQRCodeAsBase64 = GenerateQrCode::fromData(
+    'Picker', // seller name        
+    '1234567891'), // seller tax number
+    '2021-07-12T14:25:09Z', // invoice date as Zulu ISO8601 @see https://en.wikipedia.org/wiki/ISO_8601
+    '115.00', // invoice total amount
+    '15.00' // invoice tax amount
     // .......
-])->render();
+)->render();
 
 // now you can inject the output to src of html img tag :)
 // <img src="$displayQRCodeAsBase64" alt="QR Code" />
