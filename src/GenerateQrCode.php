@@ -5,6 +5,11 @@ namespace Picker\ZATCA;
 use chillerlan\QRCode\QRCode;
 use InvalidArgumentException;
 use chillerlan\QRCode\QROptions;
+use Picker\ZATCA\Tags\InvoiceDate;
+use Picker\ZATCA\Tags\InvoiceTaxAmount;
+use Picker\ZATCA\Tags\InvoiceTotalAmount;
+use Picker\ZATCA\Tags\Seller;
+use Picker\ZATCA\Tags\TaxNumber;
 
 class GenerateQrCode
 {
@@ -37,6 +42,18 @@ class GenerateQrCode
      *
      * @return GenerateQrCode
      */
+    public static function fromData($seller , $vat_register_number , $invoice_date , $total_with_tax , $tax_amount): GenerateQrCode
+    {
+        $data = [new Seller($seller ), // seller name
+            new TaxNumber($vat_register_number), // seller tax number
+            new InvoiceDate($invoice_date), // invoice date as Zulu ISO8601 @see https://en.wikipedia.org/wiki/ISO_8601
+            new InvoiceTotalAmount($total_with_tax), // invoice total amount
+            new InvoiceTaxAmount($tax_amount) // invoice tax amount
+        ];
+
+        return new self($data);
+    }
+
     public static function fromArray(array $data): GenerateQrCode
     {
         return new self($data);
