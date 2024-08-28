@@ -1,7 +1,7 @@
 <div id="top"></div>
 <div align="center"> 
   <a href="https://picker.sd"> 
-    <img src="https://picker.sd/wp-content/uploads/2023/03/1-Light.png" alt="Logo"> 
+    <img src="https://picker.sd/zain4picker-cover.svg" alt="Logo"> 
   </a>
   <h1 align="center">ZATCA (Fatoora) QR-Code Implementation</h1>
   <p align="center">
@@ -122,15 +122,10 @@ $QRCodeAsBase64 = GenerateQrCode::fromArray($tags)->toBase64();
 
 ```php
 use Picker\ZATCA\GenerateQrCode;
-use Picker\ZATCA\Tags\InvoiceDate;
-use Picker\ZATCA\Tags\InvoiceTaxAmount;
-use Picker\ZATCA\Tags\InvoiceTotalAmount;
-use Picker\ZATCA\Tags\Seller;
-use Picker\ZATCA\Tags\TaxNumber;
 
 $generatedString = GenerateQrCode::fromData(
     'Picker', // seller name        
-    '1234567891'), // seller tax number
+    '1234567891', // seller tax number
     '2021-07-12T14:25:09Z', // invoice date as Zulu ISO8601 @see https://en.wikipedia.org/wiki/ISO_8601
     '115.00', // invoice total amount
     '15.00' // invoice tax amount
@@ -152,7 +147,7 @@ use Picker\ZATCA\Tags\TaxNumber;
 
 $generatedString = GenerateQrCode::fromData(
     'Picker', // seller name        
-    '1234567891'), // seller tax number
+    '1234567891', // seller tax number
     '2021-07-12T14:25:09Z', // invoice date as Zulu ISO8601 @see https://en.wikipedia.org/wiki/ISO_8601
     '115.00', // invoice total amount
     '15.00' // invoice tax amount
@@ -163,7 +158,7 @@ $generatedString = GenerateQrCode::fromData(
 // data:image/png;base64, .........
 $displayQRCodeAsBase64 = GenerateQrCode::fromData(
     'Picker', // seller name        
-    '1234567891'), // seller tax number
+    '1234567891', // seller tax number
     '2021-07-12T14:25:09Z', // invoice date as Zulu ISO8601 @see https://en.wikipedia.org/wiki/ISO_8601
     '115.00', // invoice total amount
     '15.00' // invoice tax amount
