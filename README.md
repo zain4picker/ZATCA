@@ -7,12 +7,6 @@
   <p align="center">
     An unofficial package maintained by <a href="https://picker.sd">Picker</a> to help developers to implement ZATCA (Fatoora) QR code easily which required for e-invoicing
     <br />
-    <a href="https://picker.sd/"><strong>Explore our blogs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/zain4picker/zatca/issues/new">Report Bug</a> · 
-    <a href="https://github.com/zain4picker/zatca/discussions/new">Request Feature</a>
-       · <a href="https://t.me/zain4picker">&lt;/Picer Developers&gt;</a>
   </p>
 </div>
 
@@ -27,7 +21,7 @@
 You can install the package via composer:
 
 ```bash
-$ composer require zain4picker/zatca
+composer require zain4picker/zatca
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
